@@ -1,0 +1,71 @@
+\begin{tabularx}{\textwidth}{| r | X |}
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Use Case}: Solicitar tarjeta} \\
+
+\hline
+\multicolumn{2}{|c|}{\cellcolor[gray]{0.6}} \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Descripción}: Registración de los datos de un cliente y emisión de una
+tarjeta a su nombre.} \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Actores participantes}: Cliente} \\
+
+\hline
+\multicolumn{2}{|c|}{\cellcolor[gray]{0.6} } \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Flujos}} \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Flujo principal}} \\
+
+\hline
+1 & El cliente solicita una nueva tarjeta. \\
+\hline
+2 & El sistema solicita los datos del cliente (nombre, apellido, dni, límite de
+compra, domicilio y teléfono). \\
+\hline
+3 & Se ingresan los datos del cliente. \\
+\hline
+4 & El sistema valida que el dni del cliente no haya sido registrado aún (E1.1
+si ya ha sido registrado). \\
+\hline
+5 & El sistema pide confirmación de que el cliente ha presentado una fotocopia
+de su dni (E2.1 si no se da confirmación). \\
+\hline
+6 & El sistema pide confirmación de que el cliente ha presentado la
+documentación asociada a la garantía, y que esta es satisfactoria (E2.1 si no se
+da confirmación). \\
+\hline
+7 & El sistema solicita el número de la tarjeta entregada al cliente. \\
+\hline
+8 & El sistema almacena los datos del cliente. \\
+\hline
+9 & Fin del caso de uso. \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Flujos de excepción}} \\
+
+\hline
+E1.1 & El sistema emite un mensaje de error informando que el cliente ya posee
+una tarjeta. \\
+\hline
+E1.2 & El caso de uso continua en 9.\\
+
+\hline
+E2.1 & El sistema emite un mensaje de error informando que el cliente no
+presentó documentación obligatoria para continuar con la solicitud. \\
+\hline
+E2.2 & El caso de uso continua en 9. \\
+
+\hline
+\end{tabularx}
+
